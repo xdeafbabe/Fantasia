@@ -1,0 +1,10 @@
+.*
+__pycache__/
+__pypackages__/
+htmlcov/
+.coverage
+coverage.xml
+*.egg-info
+*.egg
+*.eggs
+!.gitignore

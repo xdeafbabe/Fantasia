@@ -1,0 +1,71 @@
+[project]
+name = "Fantasia"
+version = "0.1.0"
+description = "A static site generator."
+authors = [{name = "Euromancer", email = "euromancer@icloud.com"}]
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Documentation",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://Euromancer.github.io/Fantasia"
+Repository = "https://github.com/Euromancer/Fantasia"
+Issues = "https://github.com/Euromancer/Fantasia/issues"
+
+[project.scripts]
+fantasia = "Fantasia.cli:main"
+
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
+
+[tool]
+
+[tool.pdm]
+version = {use_scm = true}
+package-dir = "src"
+
+[tool.pdm.dev-dependencies]
+format = [
+    "autoflake>=1.4",
+    "isort>=5.10.1",
+]
+quality = [
+    "flake8-pytest-style>=1.5.1",
+    "setuptools>=60.0.3",
+    "wemake-python-styleguide>=0.16.0",
+]
+tests = [
+    "pytest-cov>=3.0.0",
+    "pytest>=6.2.5",
+]
+typing = [
+    "mypy>=0.920",
+]
+
+[tool.isort]
+multi_line_output = 3
+force_single_line = false
+balanced_wrapping = true
+default_section = "THIRDPARTY"
+known_first_party = "Fantasia"
+include_trailing_comma = true
